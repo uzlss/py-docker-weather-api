@@ -22,9 +22,12 @@ def get_weather() -> None:
         temp_c = current["temp_c"]
         condition = current["condition"]["text"]
 
-        print(f"{city}/{country} {time} Weather: {temp_c} Celsius, {condition}")
+        print(
+            f"{city}/{country} {time} Weather: {temp_c} Celsius, {condition}"
+        )
     else:
         raise Exception(response.status_code)
+
 
 if __name__ == "__main__":
     get_weather()
